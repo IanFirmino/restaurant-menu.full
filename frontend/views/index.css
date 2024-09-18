@@ -1,3 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  background-image: url('../icons/nossa-historia.jpeg');
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  border-left: 10px solid black; /* Borda preta dos lados */
+  border-right: 10px solid black; /* Borda preta dos lados */
+}
+
 .background-image {
   background-size: cover;
   height: 100vh;
