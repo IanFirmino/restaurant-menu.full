@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="card-body">
+        <% itens.forEach(function(item){ %>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="../../../icons/img-padrao.png" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title"> <%= item.nome %> </h5>
+                        <p class="card-text"> <%= item.descricao %> </p>
+                    </div>
+                </div>
+            </div>        
+        <% }); %>
+    </div>
+</body>
+</html>
