@@ -1,17 +1,11 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();  
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
-  dialect: 'mssql',
-  dialectModule: require('tedious'),
-  dialectOptions: {
-    encrypt: false,
-    trustServerCertificate: true,
-  },
+  dialect: 'mysql',
   logging: false,
 });
-
 
 module.exports = sequelize;
