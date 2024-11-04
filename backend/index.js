@@ -28,11 +28,11 @@ menuRouter.route('/menu/:category')
 
 menuRouter.route('/api/menu')
     .get(MenuController.getAll)
-    .post(MenuController.createItem);
+    .post(MenuController.createItem)
+    .delete(MenuController.deleteById);
 
 menuRouter.route('/api/menu/:id')
     .get(MenuController.getById)
-    .delete(MenuController.deleteById);
     
 menuRouter.route('/api/menu/:category')
     .get(MenuController.getByCategory);

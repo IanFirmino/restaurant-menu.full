@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+
+.body-img {
+  background-image: url('../icons/inicio-clube.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.body-inicio {
+  background-image: url('../icons/nossa-historia.jpeg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 128vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}

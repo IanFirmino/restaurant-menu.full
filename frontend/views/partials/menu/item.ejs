@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../../../css/item.css">
+    <script src="../../../js/index.js"></script>
 </head>
 <body>
-    <div class="card-body">
-        <% itens.forEach(function(item){ %>
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="../../../icons/fast-food.png" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title"> <%= item.nome %> </h5>
-                        <p class="card-text"> <%= item.descricao %> </p>
-                        <h6 class="card-title"> R$ <%= item.preco %> </h6>
-                    </div>
-                </div>
-            </div>        
-        <% }); %>
+    <div class="card" id="item-<%= item.id %>" style="width: 1000px; height: 180px;">
+        <div>
+            <button 
+                class="btn btn-danger btn-sm" 
+                style="align-self: flex-start;" 
+                onclick="deleteItem('<%= item.id %>')">
+                Excluir
+            </button>
+            <img class="card-img" src="../../../icons/fast-food.png" alt="img">
+        </div>
+        <div class="card-body">
+            
+            <div class="text-center">
+                <h5 class="card-title font-weight-bold"> <%= item.nome %> </h5>
+                <p> <%= item.descricao %> </p>
+                <p> <%= item.tamanho %> </p>
+                <h6 class="text-success">Preço: R$ <%= item.preco %> </h6>
+            </div>
+
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

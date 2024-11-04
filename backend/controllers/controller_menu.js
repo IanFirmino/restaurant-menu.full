@@ -22,17 +22,27 @@ exports.menuByCategory = async (req, res) =>{
 exports.createItem = async (req, res) => {
     let nome = req.body.nome;
     let descricao = req.body.descricao;
-    let preco = req.body.preco;
     let categoria = req.body.categoria;
+    let preco = req.body.preco;
+    let tempo_preparo = req.body.tempo_preparo;
+    let tamanho = req.body.tamanho;
+    let img = req.body.img;
 
     let newItem = await ServiceMenu.create({
         newName: nome,
         newDescricao: descricao,
         newPreco: preco,
-        newCategoria: categoria
+        newCategoria: categoria,
+        newTempoPreparo: tempo_preparo,
+        newTamanho: tamanho,
+        newImg: img
     });
 
-    res.render('new');
+    if (newItem.dataValues.id){
+        res.redirect('/new?success=true');
+    }else{
+        res.redirect('/new?error=true');
+    }
 };
 
 exports.getAll = async (req, res) => {
@@ -64,5 +74,7 @@ exports.getByCategory = async (req, res) => {
 exports.deleteById = async (req, res) => {
     let id = req.body.id;
     await ServiceMenu.deleteById(id);
-    res.status(204);
+    res.status(204).json({
+        status: 'deleted'
+    })
 };

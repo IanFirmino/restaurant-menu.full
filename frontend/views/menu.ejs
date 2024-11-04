@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>restaurant</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="../../../js/index.js"></script>
 </head>
-<body>
+<body class="body-img">
 
     <%- include('partials/menu/navbar') %>
-    
-    <div class="card text-center">
-        <%- include('partials/menu/item', {itens: itens}) %>
+    <div id="alert-container" class="container mt-3"></div>
+    <div class="card-body">
+        <% if (itens == null || itens.length === 0) { %>        
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title">cardápio vazio.</p>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <% itens.forEach(function(item){ %>
+                <div style="margin: 10px;">
+                    <%- include('partials/menu/item', { item: item }) %>
+                </div>
+            <% }); %>
+        <% } %>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

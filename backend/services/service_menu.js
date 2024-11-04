@@ -10,7 +10,10 @@ exports.create = async (item) => {
         nome: item.newName,
         descricao: item.newDescricao,
         preco: item.newPreco,
-        categoria: item.newCategoria
+        categoria: item.newCategoria,
+        tempo_preparo: item.newTempoPreparo,
+        tamanho: item.newTamanho,
+        img: item.newImg
     });
 
     return newItem;

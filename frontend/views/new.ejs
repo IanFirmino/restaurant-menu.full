@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>restaurant</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="../../../js/index.js"></script>
 </head>
-<body>
-    
-    <%- include('partials/menu/navbar') %>
+<body class="body-img">
 
-    <div class="background">
+    <%- include('partials/menu/navbar') %>
+    <div id="alert-container" class="container mt-3"></div>
+
+    <div>
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
-            <div class="card p-4" style="width: 100%; max-width: 600px; border-radius: 15px;">
+            <div class="card p-4" style="width: 100%; min-width: 1000px; border-radius: 15px;">
                 <h2 class="text-center mb-4">Novo item ao Cardápio</h2>
-                <form action="/api/menu" method="POST">
+                <form id="menuForm" action="/api/menu" method="POST">
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" name="nome" required>
@@ -28,11 +30,12 @@
                         <label for="categoria">Categoria</label>
                         <select class="form-control" id="categoria" name="categoria" required>
                             <option value="">Selecione uma opção</option>
-                            <option value="entrada">Entrada</option>
-                            <option value="sobremesa">Sobremesa</option>
-                            <option value="drink alcoolico">Drink Alcoólico</option>
-                            <option value="drink sem álcool">Drink Sem Álcool</option>
-                            <option value="petisco">Petisco</option>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Prato Principal">Prato principal</option>
+                            <option value="Sobremesa">Sobremesa</option>
+                            <option value="Drink Alcoólico">Drink Alcoólico</option>
+                            <option value="Drunk sem Alcool">Drink Sem Álcool</option>
+                            <option value="Petisco">Petisco</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -41,27 +44,22 @@
                     </div>
                     <div class="form-group">
                         <label for="tempo">Tempo de Preparo (1 a 10)</label>
-                        <input type="number" class="form-control" id="tempo" name="tempo" min="1" max="10" required>
+                        <input type="number" class="form-control" id="tempo_preparo" name="tempo_preparo" min="1" max="10" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="categoria">Tamanho</label>
-                        <select class="form-control" id="categoria" name="categoria" required>
+                        <label for="tamanho">Tamanho</label>
+                        <select class="form-control" id="tamanho" name="tamanho" required>
                             <option value="">Selecione uma opção</option>
-                            <option value="entrada">Individual</option>
-                            <option value="sobremesa">Casal</option>
-                            <option value="drink alcoolico">Até quatro pessoas</option>
-                            <option value="drink sem álcool">Para a familia toda</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Para o Casal!">Casal</option>
+                            <option value="Até quatro pessoas">Até quatro pessoas</option>
+                            <option value="Para a familia toda!">Para a familia toda</option>
                         </select>
                     </div>
-                    <div class="form-group" id="valor-promocao-group">
-                        <label for="valor-promocao">Valor Promoção (R$)</label>
-                        <input type="number" class="form-control" id="valor-promocao" name="valor-promocao" step="0.01">
-                    </div>
-                    
                     <div class="mb-5">
                         <label for="formFileSm" class="form-label">Imagem do prato</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        <input class="form-control form-control-sm" name="img" id="img" type="file">
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block">Criar</button>
@@ -73,6 +71,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../scripts/index.js"></script>
 </body>
 </html>

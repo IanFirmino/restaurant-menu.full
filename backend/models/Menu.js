@@ -12,12 +12,22 @@ const Menu = database.define('Menu', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  descricao: {
+    type: Sequelize.STRING,
+    allowNull: true
+  },
   categoria: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  descricao: Sequelize.STRING,
-  preco: Sequelize.DECIMAL,
+  preco: {
+    type: Sequelize.DECIMAL,
+    allowNull: false
+  },
+  tempo_preparo: Sequelize.INTEGER,
+  tamanho: Sequelize.STRING,
+  img: Sequelize.STRING
+
 });
 
 module.exports = Menu;

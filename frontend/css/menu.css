@@ -1,0 +1,17 @@
+.card-body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    min-height: 100vh; /* Define altura mínima para 100% da altura da janela */
+}
+
+.card-deck {
+    display: flex;
+    justify-content: center; /* Centraliza os cards no deck */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
+}
+
+.card {
+    margin: 10px; /* Margem ao redor do card */
+}
