@@ -24,7 +24,7 @@ O projeto está organizado da seguinte forma:
 
 - **Backend**: Node.js
 - **ORM**: Sequelize com MySQL
-- **Frontend**: Vanilla JavaScript e EJS (Embedded JavaScript)
+- **Frontend**: Vanilla JavaScript, EJS (Embedded JavaScript) e Booststrap
 
 ## Rotas da API
 
