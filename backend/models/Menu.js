@@ -27,7 +27,6 @@ const Menu = database.define('Menu', {
   tempo_preparo: Sequelize.INTEGER,
   tamanho: Sequelize.STRING,
   img: Sequelize.STRING
-
 });
 
 module.exports = Menu;
