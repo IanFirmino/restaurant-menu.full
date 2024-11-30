@@ -50,6 +50,8 @@ Existem três páginas principais no projeto:
 
 - `/` - Tela inicial do projeto.
 - `/new` - Criar um novo item para o cardápio.
+![Texto Alternativo](https://github.com/IanFirmino/restaurant-menu.full/blob/main/frontend/icons/route-new.png)
+
 - `/menu` - Visualizar todos os itens cadastrados.
 
 Na página `/menu`, você também pode deletar itens.
