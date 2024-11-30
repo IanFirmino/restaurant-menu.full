@@ -2,6 +2,12 @@
 
 Bem-vindo ao projeto do cardápio do restaurante **Kill Bill Bar & Grill**! Este projeto foi desenvolvido utilizando Node.js no backend e EJS como engine de visualização para o frontend.
 
+# Feito por:
+Ian Firmino RA: 2868987
+Alex Pereira RA: 2759913
+Thiago Reis RA: 2881050
+Stefanne Souza RA: 2757073
+
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
@@ -49,12 +55,11 @@ As seguintes rotas estão disponíveis para manipulação do cardápio:
 Existem três páginas principais no projeto:
 
 - `/` - Tela inicial do projeto.
-- `/new` - Criar um novo item para o cardápio.
+- `/new` - Criar um novo item para o cardápio:
 ![Texto Alternativo](https://github.com/IanFirmino/restaurant-menu.full/blob/main/frontend/icons/route-new.png)
 
-- `/menu` - Visualizar todos os itens cadastrados.
-
-Na página `/menu`, você também pode deletar itens.
+- `/menu` - Visualizar todos os itens cadastrados (Na página `/menu`, você também pode deletar itens.):
+![Texto Alternativo](https://github.com/IanFirmino/restaurant-menu.full/blob/main/frontend/icons/route-cardapio.png)
 
 ## Como Rodar o Projeto
 
@@ -74,10 +79,11 @@ Para executar o projeto localmente, siga os passos abaixo:
    ```bash
    npm install
    ```
-
-4. Configure o arquivo `.env.development` com as credenciais do seu banco de dados.
-
-5. Inicie o projeto:
+4. Crie um banco de dados em MySQL localhost chamado "restaurant_menu".
+   
+6. Configure o arquivo `.env.development` com as credenciais do seu banco de dados.
+   
+8. Inicie o projeto:
    ```bash
    npm start
    ```
