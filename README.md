@@ -2,12 +2,6 @@
 
 Bem-vindo ao projeto do cardápio do restaurante **Kill Bill Bar & Grill**! Este projeto foi desenvolvido utilizando Node.js no backend e EJS como engine de visualização para o frontend.
 
-# Feito por:
-- Ian Firmino. RA: 2868987
-- Alex Pereira. RA: 2759913
-- Thiago Reis. RA: 2881050
-- Stefanne Souza. RA: 2757073
-
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
